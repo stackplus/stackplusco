@@ -4,11 +4,14 @@
 	{% include head.html %}
 </head>
 <body>
+{% if site.maintenance == true %}
+	{% include maintenance.html %}
+{% else %}
 	{{ content }}
-
 	{% include footer.html %}
-	{% if site.github.pages_hostname == 'github.io' %}
+{% endif %}
+{% if site.github.pages_hostname == 'github.io' %}
 	{% include ganalytics.html %}
-	{% endif %}
+{% endif %}
 </body>
 </html>

@@ -19,7 +19,7 @@ social:
     - https://github.com/stackplus
     - https://twiter.com/StackPlus_Col
 
-# permalink: /blog/:slug
+permalink: none
 
 # Build settings
 markdown: kramdown
@@ -29,6 +29,8 @@ ga_tracking_id: "UA-56513033-1"
 gs_verification: "hDsO93u-eg6iDCshvwZMk4-dICjVfU8sUiaCE9URhYA"
 
 timezone: America/Bogota
+
+maintenance: true
 
 # Plugins 
 plugins:

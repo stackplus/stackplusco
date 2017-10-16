@@ -1,0 +1,52 @@
+# Site settings
+title: StackPlus Networks
+subtitle: "[Soluciones de Nueva Generacion]"
+description: StackPlus, site, projects, network, cloud, security, containers, and more!
+url: https://stackplus.co
+baseurl: "" # the subpath of your site, e.g. /blog
+
+email: info@stackplus.co
+
+twitter:
+  username: StackPlus_Col
+
+cover: /assets/img/cover.png
+logo: /assets/img/logo.png
+
+social:
+  name: StackPlus Networks
+  links:
+    - https://github.com/stackplus
+    - https://twiter.com/StackPlus_Col
+
+# permalink: /blog/:slug
+
+# Build settings
+markdown: kramdown
+
+# Google analytics
+ga_tracking_id: "UA-56513033-1"
+gs_verification: "_VJK_AWUqfpECxCarZDmpbl-GlL5_l5zuBZSEyxIdj8"
+
+timezone: America/Bogota
+
+# Plugins 
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .sass-cache
+  - "*.gemspec"
+  - /vendor/
+  - CNAME
+  - LICENSE
+
+keep_files:
+  - .git
+  - .gitignore
+  - .ruby-version

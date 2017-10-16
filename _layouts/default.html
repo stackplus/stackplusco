@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html class="no-js">
-  <head>
-    {% include head.html %}
-  </head>
-  <body>
-    {{ content }}
+<head>
+	{% include head.html %}
+</head>
+<body>
+	{{ content }}
 
-    {% include footer.html %}
+	{% include footer.html %}
+	{% if site.github == 'gh_pages' %}
 	{% include ganalytics.html %}
-    </body>
+	{% endif %}
+	{{ site.github }}
+</body>
 </html>

@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
+	{% include meta.html %}
 	{% include head.html %}
 </head>
-<body>
-{% if site.maintenance == true %}
-	{% include maintenance.html %}
-{% else %}
-	{{ content }}
-	{% include footer.html %}
-{% endif %}
-{% if site.github.pages_hostname == 'github.io' %}
-	{% include ganalytics.html %}
-{% endif %}
+<body id="top" class="has-header-search">
+	{% if site.maintenance %}
+		{% include maintenance.html %}
+	{% else %}
+		{{ content }}
+	{% endif %}
+	
+	{% include javascript.html %}
+	
+	{% if site.github.pages_hostname == 'github.io' %}
+		{% include analytics.html %}
+	{% endif %}
 </body>
 </html>

@@ -1,51 +1,78 @@
-<header>
+<!-- Top bar -->
+<div class="top-bar dark-bg lighten-2 visible-md visible-lg">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<!-- header Nav Start -->
-				<nav class="navbar navbar-default">
-					<div class="container-fluid">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="{{ site.baseurl }}/">
-								<img src="{{ site.baseurl }}/assets/img/logo.png" alt="Logo">
-							</a>
-						</div>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-right">
-								<li>
-									<a href="{{ site.baseurl }}/">Inicio</a>
-								</li>
-								<li {% if page.url == '/about/' %}class="active"{% endif %}>
-									<a href="{{ site.baseurl }}/about/">Quienes Somos</a>
-								</li>
-								<li {% if page.url == '/solutions/' %}class="active"{% endif %}>
-									<a href="{{ site.baseurl }}/solutions/">Soluciones</a>
-								</li>
-								<li {% if page.url == '/services/' %}class="active"{% endif %}>
-									<a href="{{ site.baseurl }}/services/">Servicios</a>
-								</li>
-								<li {% if page.url == '/blog/' %}class="active"{% endif %}>
-									<a href="{{ site.baseurl }}/blog/">Blog</a>
-								</li>
-								<li {% if page.url == '/news/' %}class="active"{% endif %}>
-									<a href="{{ site.baseurl }}/news/">News</a>
-								</li>
-								<li {% if page.url == '/clients/' %}class="active"{% endif %}>
-									<a href="{{ site.baseurl }}/clients/">Clientes</a>
-								</li>
-							</ul>
-						</div><!-- /.navbar-collapse -->
-					</div><!-- /.container-fluid -->
-				</nav>
+			<!-- Social Icon -->
+			<div class="col-md-6">
+				<!-- Social Icon -->
+				<ul class="list-inline social-top tt-animate btt">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+					<li><a href="#"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+
+			<div class="col-md-6 text-right">
+				<ul class="topbar-cta no-margin">
+					<li class="mr-20">
+						<a><i class="material-icons mr-10">&#xE0B9;</i> info@stackplus.co</a>
+					</li>
+					<li>
+						<a><i class="material-icons mr-10">&#xE0CD;</i> +57 XXXXXX</a>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.top-bar -->
+
+<!--header start-->
+<header id="header" class="tt-nav nav-border-bottom">
+	<div class="header-sticky light-header">
+		<div class="container">
+			<div id="materialize-menu" class="menuzord">
+				<a class="logo-brand" href="{{ site.baseurl }}/">
+					<img src="{{ site.baseurl }}/assets/img/logo.png" alt="" width="250" height="40">
+				</a>
+				<ul class="menuzord-menu pull-right">
+					<li {% if page.url contains 'solutions' %}class="active"{% endif %}>
+						<a href="{{ site.baseurl }}/solutions/">Soluciones</a>
+					</li>
+					<li {% if page.url contains 'services' %}class="active"{% endif %}>
+						<a href="{{ site.baseurl }}/services/">Servicios</a>
+					</li>
+					<li {% if page.url contains 'partners' %}class="active"{% endif %}>
+						<a href="{{ site.baseurl }}/partners/">Partners</a>
+					</li>
+					<li {% if page.url contains 'clients' %}class="active"{% endif %}>
+						<a href="{{ site.baseurl }}/clients/">Clientes</a>
+					</li>
+					<li {% if page.url contains 'about' %}class="active"{% endif %}>
+						<a href="{{ site.baseurl }}/about/">Nosotros</a>
+					</li>
+					<li {% if page.url contains 'news' %}class="active"{% endif %}>
+						<a href="{{ site.baseurl }}/news/">News</a>
+					</li>
+					<li {% if page.url contains 'blog' %}class="active"{% endif %}>
+						<a href="{{ site.baseurl }}/blog/">Blog</a>
+					</li>
+					<li {% if page.url contains 'contact' %}class="active"{% endif %}>
+						<a href="{{ site.baseurl }}/contact/">Contacto</a>
+					</li>
+				</ul>
 			</div>
 		</div>
+		{% if page.tab %}
+		<div class="nav-content">
+			<ul class="tabs tabs-transparent">
+				{% for tab in page.tabs %}
+				<li class="tab"><a href="#{{ tab[0] }}">{{ tab[1] }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
 	</div>
 </header>

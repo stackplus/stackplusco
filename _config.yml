@@ -1,7 +1,7 @@
 # Site settings
-title: StackPlus Networks
+title: "StackPlus Networks"
 subtitle: "[Soluciones de Nueva Generacion]"
-description: StackPlus, site, projects, network, cloud, security, containers, and more!
+description: "StackPlus, site, projects, network, cloud, security, containers, and more!"
 url: https://stackplus.co
 baseurl: "" # the subpath of your site, e.g. /blog
 
@@ -21,10 +21,15 @@ social:
 
 permalink: none
 
+collections:
+  views:
+    output: true
+    permalink: /:path/
+
 # Build settings
 markdown: kramdown
 
-# Google analytics
+# Google analytics & Google Search
 ga_tracking_id: "UA-56513033-1"
 gs_verification: "hDsO93u-eg6iDCshvwZMk4-dICjVfU8sUiaCE9URhYA"
 

@@ -1,0 +1,32 @@
+[project]
+name = StackPlus Networks
+url = https://www.stackplus.co
+locale = es_CO
+excluded_assets = *.backup, *~
+
+[servers.ghpages]
+name = GitHub Pages
+enable = yes
+default = yes
+target = ghpages+https://stackplus/stackplusco?cname=www.stackplus.co
+
+[servers.dev]
+name = Devel Push
+enable = yes
+target = ghpages://stackplus/stackplusco?cname=www.stackplus.co
+
+[alternatives.es]
+name = Spanish
+primary = yes
+locale = es_CO
+
+[alternatives.en]
+name = English
+locale = en_US
+url_prefix = /en/
+
+[maintenance]
+name = Maintenance
+label = Maintenance
+type = boolean
+default = yes

@@ -1,7 +1,7 @@
 [project]
 name = StackPlus Networks
-url = https://www.stackplus.co
-url_style = absolute
+#url = https://www.stackplus.co
+#url_style = absolute
 locale = es_CO
 excluded_assets = *.backup, *~
 

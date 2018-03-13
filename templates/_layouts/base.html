@@ -16,9 +16,6 @@
   {% endif %}
 
   {% include "_layouts/javascript.html" %}
-
-  {#{% if site.github.pages_hostname == 'github.io' %}
-    {% include "_layouts/analytics.html" %}
-  {% endif %}#}
+  <div class="ga-script">{{ generate_google_analytics() }}</div>
 </body>
 </html>

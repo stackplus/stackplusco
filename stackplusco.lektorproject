@@ -1,19 +1,15 @@
 [project]
 name = StackPlus Networks
 url = https://www.stackplus.co
+url_style = absolute
 locale = es_CO
 excluded_assets = *.backup, *~
 
-[servers.ghpages]
-name = GitHub Pages
-enable = yes
-default = yes
-target = ghpages+https://stackplus/stackplusco?cname=www.stackplus.co
-
-[servers.dev]
-name = Devel Push
-enable = yes
-target = ghpages://stackplus/stackplusco?cname=www.stackplus.co
+[packages]
+lektor-google-analytics = 0.1.3
+lektor-webpack-support = 0.4
+lektor-markdown-highlighter = 0.2
+lektor-markdown-header-anchors = 0.2
 
 [alternatives.es]
 name = Spanish
@@ -25,8 +21,13 @@ name = English
 locale = en_US
 url_prefix = /en/
 
-[maintenance]
-name = Maintenance
-label = Maintenance
-type = boolean
+[servers.ghpages]
+name = GitHub Pages
+enable = yes
 default = yes
+target = ghpages+https://stackplus/stackplusco?cname=www.stackplus.co
+
+[servers.dev]
+name = Devel Push
+enable = yes
+target = ghpages://stackplus/stackplusco?cname=www.stackplus.co

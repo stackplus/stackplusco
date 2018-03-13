@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="ga-script">{{ generate_google_analytics() }}</div>
+<title>
+  {% if maintenance %}
+    Site Maintenance
+  {% elif title and title != 'Index' %}
+    {{ title }} | {{ site.title }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+</title>
+<body>
+  {% if maintenance %}
+    {% include maintenance.html %}
+  {% else %}
+    <header>
+      <h1>splus</h1>
+      <nav>
+        <ul class="nav navbar-nav">
+          <li{% if this._path == '/' %} class="active"{% endif
+            %}><a href="{{ '/'|url }}">Welcome</a></li>
+          {% for href, title in [
+            ['/blog', 'Blog'],
+            ['/projects', 'Projects'],
+            ['/about', 'About']
+          ] %}
+            <li{% if this.is_child_of(href) %} class="active"{% endif
+              %}><a href="{{ href|url }}">{{ title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+    <div class="page">
+      {% block body %}{% endblock %}
+    </div>
+    <p>{{ maintenance }}
+    <footer>
+      &copy; Copyright 2018 by Mario Pardo.
+    </footer>
+  {% endif %}
+</body>

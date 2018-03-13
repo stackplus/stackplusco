@@ -1,0 +1,24 @@
+{% set maintenance = bag('site.maintenance.enable') %}
+{% set gs_verification = bag('site.google.gs_verification') %}
+<!DOCTYPE html>
+<html class="no-js">
+{% block head %}
+<head>
+	{% include "_layouts/meta.html" %}
+	{% include "_layouts/head.html" %}
+</head>
+{% endblock %}
+<body id="top" class="has-header-search">
+  {% if maintenance == "yes" %}
+    {% include "_layouts/maintenance.html" %}
+  {% else %}
+    {{ content }}
+  {% endif %}
+
+  {% include "_layouts/javascript.html" %}
+
+  {#{% if site.github.pages_hostname == 'github.io' %}
+    {% include "_layouts/analytics.html" %}
+  {% endif %}#}
+</body>
+</html>

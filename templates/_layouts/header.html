@@ -1,0 +1,50 @@
+<!-- Top bar -->
+<div class="top-bar dark-bg lighten-2 visible-md visible-lg">
+	<div class="container">
+		<div class="row">
+			<!-- Social Icon -->
+			<div class="col-md-6">
+				<!-- Social Icon -->
+				<ul class="list-inline social-top tt-animate btt">
+					<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+					<li><a href="#"><i class="fas fa-rss"></i></a></li>
+				</ul>
+			</div>
+
+			<div class="col-md-6 text-right">
+				<ul class="topbar-cta no-margin">
+					<li class="mr-20">
+						<a><i class="material-icons mr-10">&#xE0B9;</i> info@stackplus.co</a>
+					</li>
+					<li>
+						<a><i class="material-icons mr-10">&#xE0CD;</i> +57 XXXXXX</a>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.top-bar -->
+
+<!--header start-->
+<header id="header" class="tt-nav nav-border-bottom">
+	<div class="header-sticky light-header">
+		<div class="container">
+			<div id="materialize-menu" class="menuzord">
+				<a class="logo-brand" href="{{ site.baseurl }}/">
+					<img src="{{ site.baseurl }}/assets/img/logo.png" alt="" width="250" height="40">
+				</a>
+				<ul class="menuzord-menu pull-right">
+					{% for id, item in bag('menu').items() %}
+						<li {% if this.is_child_of(item.path) or (item.alt_path and this.is_child_of(item.alt_path)) %} class="active" {% endif %}>
+							<a href="{{ item.path|url }}">{{ item.label }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>

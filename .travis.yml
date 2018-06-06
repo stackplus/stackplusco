@@ -1,5 +1,5 @@
 language: python
-python: 3.6.4
+python: 3.6.5s
 cache:
   directories:
     - $HOME/.cache/pip
@@ -10,4 +10,4 @@ deploy:
   provider: script
   script: "lektor deploy ghpages"
   on:
-    branch: prod
+    branch: lektor

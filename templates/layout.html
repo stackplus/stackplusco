@@ -1,1 +1,9 @@
 {% extends "_layouts/base.html" %}
+{% block page %}
+	{% block outerbody %}
+		{% include "_layouts/header.html" %}
+		{% block content %}
+		{% endblock %}
+		{% include "_layouts/footer.html" %}
+	{% endblock %}
+{% endblock %}

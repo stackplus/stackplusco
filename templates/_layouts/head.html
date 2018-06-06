@@ -1,24 +1,14 @@
-<title>
-  {% if maintenance == "yes" %}
-    Site Maintenance
-  {% elif this.active != "index" %}
-    {{ this.title }} | StackPlus Networks
-  {% else %}
-    {{ this.title }}
-  {% endif %}
-    </title>
+
+	<title>{% if maintenance == "yes" %}Site Maintenance{% elif this.active != "index" %}{{ this.title }} | StackPlus Networks{% else %}{{ this.title }}{% endif %}</title>
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="/static/favicon.ico">
 
-	<!-- Font -->
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
-
-	<!-- Font Material Icons -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-	<!-- FontAwesome CSS -->
-	<link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<!-- Material Design for Bootstrap fonts and icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
 	
-	<!-- Pure CSS -->
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <!-- Material Design for Bootstrap CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+	<!-- FontAwesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>

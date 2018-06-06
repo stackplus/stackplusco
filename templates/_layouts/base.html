@@ -1,21 +1,30 @@
+{%- from "macros/translation.html" import transbag -%}
 {% set maintenance = bag('site.maintenance.enable') %}
 {% set gs_verification = bag('site.google.gs_verification') %}
+
 <!DOCTYPE html>
+{% block html %}
 <html class="no-js">
+
 {% block head %}
 <head>
 	{% include "_layouts/meta.html" %}
 	{% include "_layouts/head.html" %}
 </head>
 {% endblock %}
-<body id="top" class="has-header-search">
+
+<body">
   {% if maintenance == "yes" %}
     {% include "_layouts/maintenance.html" %}
   {% else %}
-    {{ content }}
+    <div class="page">
+      {% block page %}{% endblock %}
+    </div>
   {% endif %}
 
   {% include "_layouts/javascript.html" %}
   <div class="ga-script">{{ generate_google_analytics() }}</div>
 </body>
+
 </html>
+{% endblock %}

@@ -1,19 +1,19 @@
 <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-    {% if excerpt %}
-    <meta name="description" content="{{ this.description | striptags }}" />
-    <meta property="og:description" content="{{ this.description | striptags }}" />
-    {% else %}
-    <meta name="description" content="{{ site.description }}">
-    <meta property="og:description" content="{{ site.description }}" />
-    {% endif %}
-    <meta name="author" content="{{ site.name }}" />
-    {% if this.title %}
-    <meta property="og:title" content="{{ this.title }}" />
-    <meta property="twitter:title" content="{{ this.title }}" />
-    {% endif %}
-    {% if gs_verification %}
-    <meta name="google-site-verification" content="{{ gs_verification }}" />
-    {% endif %}
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% if excerpt %}
+<meta name="description" content="{{ this.description | striptags }}" />
+<meta property="og:description" content="{{ this.description | striptags }}" />
+{% else %}
+<meta name="description" content="{{ site.description }}">
+<meta property="og:description" content="{{ site.description }}" />
+{% endif %}
+<meta name="author" content="{{ site.name }}" />
+{% if this.title %}
+<meta property="og:title" content="{% if this.active == 'index' %}{{ this.title }}{% else %}{{ this.title }} | StackPlus Networks{% endif %}" />
+<meta property="twitter:title" content="{% if this.active == 'index' %}{{ this.title }}{% else %}{{ this.title }} | StackPlus Networks{% endif %}" />
+{% endif %}
+{% if gs_verification %}
+<meta name="google-site-verification" content="{{ gs_verification }}" />
+{% endif %}

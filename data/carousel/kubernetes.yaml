@@ -1,0 +1,11 @@
+weight: 3
+title: "Kubernetes"
+description: >
+  <ul class="list-style-none">
+    <li>¿Qué es Kubernetes?</li>
+    <li>¿Por qué es necesario tener Kubernetes?</li>
+    <li>Aprenda el lenguaje de Kubernetes</li>
+    <li>Uso de Kubernetes en la producción</li>
+    <li><a href="#">Leer mas</a></li>
+  </ul>
+image: "img/carousel/kubernetes_dashboard.jpg"

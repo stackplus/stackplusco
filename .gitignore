@@ -1,0 +1,9 @@
+_site/
+.sass-cache/
+.jekyll-metadata
+.ruby-version
+.python-version
+.hugo-version
+/public
+*.pyc
+*.bak

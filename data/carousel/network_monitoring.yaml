@@ -1,0 +1,14 @@
+weight: 2
+title: "Network Monitoring"
+description: >
+  <ul class="list-style-none">
+     <li>Network performance</li>
+     <li>Network health</li>
+     <li>Configuration changes</li>
+     <li>Metric collection</li>
+     <li>Autodiscovery</li>
+     <li>Proactive network monitoring</li>
+     <li>Unlimited scalability</li>
+     <li><a href="#">Leer mas></a></li>
+   </ul>
+image: "img/carousel/noc.jpeg"

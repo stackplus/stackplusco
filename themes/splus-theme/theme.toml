@@ -1,0 +1,17 @@
+name = "Splus Theme"
+license = "MIT"
+licenselink = "https://github.com/stackplus/stackplusco/blob/hugo/themes/splus-theme/LICENSE"
+description = "A port of the Splus theme"
+homepage = "//stackplus.co"
+tags = ["blog", "company", "portfolio", "projects", "minimal", "responsive"]
+features = ["blog", "themes", "disqus", "minimal", "responsive"]
+min_version = 0.15
+
+[author]
+    name = "stackplus"
+    homepage = "//github.com/stackplus"
+
+# If Porting existing theme
+[original]
+    author =  "adrianmo"
+    homepage = "//github.com/adrianmo"

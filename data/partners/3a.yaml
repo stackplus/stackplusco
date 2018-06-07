@@ -1,0 +1,3 @@
+name: "kubernetes"
+image: "img/partners/kubernetes.png"
+url: "//kubernetes.io/"

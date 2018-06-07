@@ -1,0 +1,13 @@
+weight: 1
+title: "Network Infrastructure Solutions "
+description: >
+  <ul class="list-style-none">
+     <li>Routing & Switching</li>
+     <li>Wireless</li>
+     <li>Network Security</li>
+     <li>Network Monitoring</li>
+     <li>Virtualization</li>
+     <li>UCM / UCS</li>
+     <li><a href="#">Leer mas></a></li>
+   </ul>
+image: "img/carousel/networking.png"
